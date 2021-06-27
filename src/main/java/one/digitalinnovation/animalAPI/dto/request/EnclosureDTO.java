@@ -9,8 +9,7 @@ import one.digitalinnovation.animalAPI.enums.EnclosureType;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 

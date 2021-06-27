@@ -16,5 +16,4 @@ public enum EnclosureType {
 
     private final String description;
 
-
 }

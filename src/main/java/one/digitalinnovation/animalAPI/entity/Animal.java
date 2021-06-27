@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.*; //.CascadeType;.Column;.Entity;.FetchType;.GeneratedValue;.GenerationType;.Id;.OneToMany.
 import java.time.LocalDate;
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class Animal {
     private LocalDate birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<NumberEnclosure> Enclosure;
+    private List<NumberEnclosure> Enclosures;
 
 
 }
