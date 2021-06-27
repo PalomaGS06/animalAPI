@@ -32,10 +32,10 @@ public class Animal {
     @Column(nullable = false)
     private String sexo;
 
+    private LocalDate birthDate;
+
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<NumberEnclosure> Enclosure;
-
-    private LocalDate birthDate;
 
 
 }
