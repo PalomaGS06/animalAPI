@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 // esse asterisco do "import org.springframework.web.bind.annotation.*;"
 // inclui os: .PostMapping, .RequestBody, .RequestMapping, .RestController
 
@@ -35,7 +36,9 @@ private AnimalService animalService;
         return animalService.createAnimal(animalDTO);
     }
 
-
+    public List<AnimalDTO> listAll(){
+           return animalService.listAll();
+    }
 
 }
 

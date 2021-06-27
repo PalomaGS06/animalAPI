@@ -8,6 +8,9 @@ import one.digitalinnovation.animalAPI.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 @Service
 public class AnimalService {
@@ -33,7 +36,11 @@ public class AnimalService {
     }
 
 
+    public List<AnimalDTO> listAll() {
+        List<Animal> allAnimal = animalRepository.findAll(); //lista todo mundo
+        return allAnimal.stream() //transformações de dados em coleções
+            .map(animalMapper::toDTO)
+            .collect(Collectors.toList());
 
-
-
+    }
 }
